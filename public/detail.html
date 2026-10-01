@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4f0" />
+    <title>Skill details · Skill Atlas</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/detail.js"></script>
+  </head>
+  <body>
+    <div class="detail-shell">
+      <header class="detail-topbar"><a class="detail-brand" href="/">S<span>·</span> <strong>Skill Atlas</strong></a><span class="topbar-status"><i aria-hidden="true"></i> Local inventory</span></header>
+      <main class="detail-main">
+        <a id="back-link" class="back-link" href="/">← Back to all skills</a>
+        <p id="detail-status" class="status-message" role="status">Reading skill instructions…</p>
+        <div id="detail-content" hidden>
+          <div class="detail-heading"><p class="eyebrow">SKILL PROFILE</p><h1 id="detail-name"></h1><p id="detail-description" class="detail-description"></p><div id="detail-scopes" class="row-labels"></div></div>
+          <div class="detail-grid">
+            <div class="detail-primary">
+              <section class="detail-panel" aria-labelledby="what-heading"><p class="eyebrow">AT A GLANCE</p><h2 id="what-heading">What it helps with</h2><p id="detail-what" class="detail-lead"></p><div class="use-when"><h3>When to use it</h3><p id="detail-when"></p></div><div id="use-cases-wrap" hidden><h3>Documented examples</h3><ul id="detail-use-cases" class="use-cases"></ul></div></section>
+              <section class="detail-panel instructions-panel" aria-labelledby="instructions-heading"><div class="panel-title"><div><p class="eyebrow">SOURCE MATERIAL</p><h2 id="instructions-heading">Full instructions</h2></div><span>SKILL.md</span></div><p class="panel-note">The original skill instructions are shown below as reference material.</p><details id="instructions-disclosure"><summary>Read complete SKILL.md</summary><div id="instructions-content" class="markdown-content"></div><details class="raw-disclosure"><summary>View raw file, including frontmatter</summary><pre id="raw-skill-content"></pre></details></details></section>
+            </div>
+            <aside class="detail-aside" aria-label="Skill source and installation">
+              <section class="detail-panel provenance-panel"><p class="eyebrow">PROVENANCE</p><h2>Where it came from</h2><div id="author-fact"></div><div id="repository-fact"></div><div id="website-fact"></div><div id="plugin-fact"></div><details id="evidence-disclosure" class="evidence-disclosure"><summary>View source evidence</summary><div id="evidence-content"></div></details></section>
+              <section class="detail-panel installation-panel"><p class="eyebrow">ON THIS MAC</p><h2>Installation paths</h2><p id="location-count" class="panel-note"></p><div id="detail-locations"></div></section>
+            </aside>
+          </div>
+        </div>
+      </main>
+      <footer class="detail-footer">Read only · Local to this Mac</footer>
+    </div>
+  </body>
+</html>

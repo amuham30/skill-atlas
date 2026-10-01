@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4f0" />
+    <title>Skill Atlas</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Dashboard navigation">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">S<span>·</span></span><div><strong>Skill Atlas</strong><small>Personal inventory</small></div></div>
+        <p class="nav-label">LIBRARY</p>
+        <nav id="navigation" class="navigation" aria-label="Skill collections"></nav>
+        <div class="sidebar-bottom"><span class="sidebar-orbit" aria-hidden="true"></span><p>One place for the skills on your Mac.</p><small>Local catalog · Phase 3</small></div>
+      </aside>
+      <main class="main">
+        <header class="topbar"><span class="topbar-label">YOUR WORKSPACE <span aria-hidden="true">/</span> SKILLS</span><span class="topbar-status"><i aria-hidden="true"></i> Local inventory</span></header>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy"><p class="eyebrow">THE SKILL LIBRARY</p><h1 id="page-title">Every skill,<br><em>in one place.</em></h1><p id="page-subtitle">A clear view of what is installed and where it lives.</p></div>
+          <div class="intro-art" aria-hidden="true"><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div><div class="art-card art-card-one"></div><div class="art-card art-card-two"></div><div class="art-card art-card-three"></div><div class="art-star">✳</div></div>
+        </section>
+        <section class="stats" aria-label="Inventory totals">
+          <div class="stat"><strong id="total-skills">—</strong><span>Unique skills</span></div>
+          <div class="stat"><strong id="total-installations">—</strong><span>Installation paths</span></div>
+          <div class="stat"><strong id="total-issues">—</strong><span>Needs attention</span></div>
+        </section>
+        <section class="catalog" aria-labelledby="collection-title">
+          <div class="section-heading"><div><p class="eyebrow">BROWSE YOUR LIBRARY</p><h2 id="collection-title">All skills</h2><p id="collection-description" class="section-description">All unique skills found across your installations.</p></div><div id="collection-count" class="count-chip" aria-live="polite">—</div></div>
+          <div id="discovery-controls" class="discovery-controls">
+            <div class="search-line"><label for="search-input">Find a skill by name or task</label><div class="search-input-wrap"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Try “make a chart” or “write tests”" autocomplete="off" spellcheck="false" /></div><p>Searches descriptions, examples, authors, sources, and full instructions.</p></div>
+            <div class="browse-line"><div><span class="filter-title">Browse by category</span><span class="inference-note">Inferred from skill names and descriptions</span></div><div id="category-chips" class="category-chips" role="group" aria-label="Skill categories"></div></div>
+            <div class="filter-grid">
+              <label>Author<select id="author-filter"><option value="">All authors</option></select></label>
+              <label>Plugin<select id="plugin-filter"><option value="">All plugins</option></select></label>
+              <label>Source type<select id="source-filter"><option value="">All sources</option></select></label>
+              <label>Sort by<select id="sort-select"><option value="name">Name A–Z</option><option value="relevance">Best match</option><option value="source">Source A–Z</option></select></label>
+            </div>
+            <div class="filter-summary"><span id="results-summary" role="status" aria-live="polite">Loading skills…</span><button id="clear-filters" type="button">Clear filters</button></div>
+          </div>
+          <div id="status-message" class="status-message" role="status">Reading your skill folders…</div>
+          <div id="skill-list" class="skill-list"></div>
+        </section>
+        <footer class="footer"><span id="scan-time">Scanning local files…</span><span>Read only · Local to this Mac</span></footer>
+      </main>
+    </div>
+  </body>
+</html>
